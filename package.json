@@ -1,0 +1,23 @@
+{
+  "name": "fachschaft-mathe-web",
+  "version": "1.0.0",
+  "description": "Website for Fachschaft Mathematik at the University of Trier",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process can be defined here'",
+    "test": "echo 'Test process can be defined here'"
+  },
+  "keywords": [
+    "Fachschaft",
+    "Mathematik",
+    "Universität Trier",
+    "website"
+  ],
+  "author": "Fachschaft Mathematik",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

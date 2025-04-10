@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infostand – Fachschaft Mathematik</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    header.hero {
+      background-image: url('../assets/background.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+    }
+
+    header.hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header.hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    header.hero h1,
+    header.hero p {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .info-section {
+      flex: 1 1 60%;
+    }
+
+    .form-section {
+      flex: 1 1 35%;
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: #002b5c;
+      color: white;
+      text-align: center;
+    }
+
+    footer a {
+      color: #a5cfff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Infostand</h1>
+      <p>07. April 2025 • Gebäude B17</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container content-grid">
+      <div class="info-section">
+        <h2>📌 Infostand der Fachschaft 📚</h2>
+        <p><strong>Am 07. April 2025 sind wir für euch da!</strong></p>
+
+        <p>Im Rahmen der <strong>Orientierungstage zum Studienanfang</strong> findest du uns mit einem Infostand im Gebäude <strong>B17</strong>. Dort beantworten wir all deine Fragen rund ums Mathematikstudium, geben dir Tipps zum Stundenplan, zeigen dir unsere Veranstaltungen – und: du lernst direkt deine Fachschaft kennen! 🤗</p>
+
+        <p>Unser Stand ist nicht nur Infoquelle, sondern auch Treffpunkt für neue Bekanntschaften, Mini-Goodies 🎁 und direkte Unterstützung in der Startphase deines Studiums.</p>
+
+        <p>Eine <strong>Pinnwand</strong> mit wichtigen Infos & Kontakten steht ebenfalls bereit.</p>
+
+        <h3>💬 Persönliche Beratung</h3>
+        <p>Wir nehmen uns Zeit für dich – ob Studienorganisation, Prüfungen oder Ersti-Veranstaltungen: komm vorbei und sprich uns einfach an.</p>
+
+        <p><strong>Ort:</strong> B17, Universität Trier<br>
+        <strong>Datum:</strong> Montag, 07. April 2025<br>
+        <strong>Uhrzeit:</strong> im Anschluss an die Einführungsveranstaltungen</p>
+
+        <p>Wir freuen uns auf dich! 🎉</p>
+      </div>
+
+      <div class="form-section">
+        <h2>Frage an uns?</h2>
+        <form action="https://formspree.io/f/mldjawnb" method="POST">
+          <input type="text" name="Veranstaltung" value="Infostand – 07.04.25" readonly />
+          <input type="text" name="Name" placeholder="Dein Name" required />
+          <input type="email" name="_replyto" placeholder="E-Mail" required />
+          <textarea name="Nachricht" placeholder="Deine Frage oder Anliegen" required></textarea>
+          <input type="hidden" name="_next" value="../danke.html" />
+          <button type="submit">Nachricht senden</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fachschaft Mathematik – Universität Trier</p>
+    <p><a href="../impressum.html">Impressum</a> • <a href="../datenschutz.html">Datenschutz</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stadtrallye – Fachschaft Mathematik</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    header.hero {
+      background-image: url('../assets/background.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+    }
+
+    header.hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header.hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    header.hero h1,
+    header.hero p {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .info-section {
+      flex: 1 1 60%;
+    }
+
+    .form-section {
+      flex: 1 1 35%;
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: #002b5c;
+      color: white;
+      text-align: center;
+    }
+
+    footer a {
+      color: #a5cfff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Stadtrallye</h1>
+      <p>10. April 2025 • Treffpunkt: Porta Nigra</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container content-grid">
+      <div class="info-section">
+        <h2>🗺️ Die Stadtrallye durch Trier 🧩</h2>
+        <p><strong>Spiel, Spaß & neue Freundschaften – der perfekte Start ins Studium!</strong></p>
+
+        <p>Bevor die Vorlesungen beginnen, laden wir euch zu unserer traditionellen <strong>Stadtrallye</strong> ein. In kleinen Gruppen zieht ihr durch Trier, meistert kreative Aufgaben und entdeckt dabei nicht nur die Stadt, sondern auch eure Kommiliton*innen.</p>
+
+        <h3>🚩 Was erwartet euch?</h3>
+        <ul>
+          <li>Start an der <strong>Porta Nigra</strong> um 16 Uhr</li>
+          <li>Abwechslungsreiche Stationen mit Minispielen, Rätseln & Challenges 🎯</li>
+          <li>Die perfekte Gelegenheit, schon vor Studienbeginn neue Leute kennenzulernen 🤝</li>
+          <li>Und natürlich: jede Menge Spaß!</li>
+        </ul>
+
+        <p>💶 Die Teilnahmegebühr beträgt <strong>5 €</strong> – bitte passend mitbringen. Die Einnahmen fließen in unsere weiteren Veranstaltungen im Semester.</p>
+
+        <p>Die Stadtrallye ist der beste Beweis: Mathe-Studium beginnt nicht mit Formeln, sondern mit Freundschaft und Erlebnis.</p>
+
+        <h2>So funktioniert die Reservierung</h2>
+        <p>Fülle einfach das Reservierungsformular rechts aus. Nach dem Absenden bekommst du eine Bestätigung per E-Mail.</p>
+        <p><strong>Bezahlung:</strong> Bitte bring den Teilnahmebeitrag persönlich im Fachschaftsbüro vorbei. Erst mit Bezahlung ist deine Reservierung gültig.</p>
+
+        <h2>Bilder früherer Rallyes</h2>
+        <div class="gallery">
+          <img src="../assets/stadtrallye-2023.jpg" alt="Stadtrallye 2023" />
+          <img src="../assets/stadtrallye-2022.jpg" alt="Stadtrallye 2022" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Jetzt reservieren</h2>
+        <form action="https://formspree.io/f/mldjawnb" method="POST">
+          <input type="text" name="Veranstaltung" value="Stadtrallye – 10.04.25" readonly />
+          <input type="text" name="Name" placeholder="Dein Name" required />
+          <input type="email" name="_replyto" placeholder="E-Mail" required />
+          <input type="number" name="Tickets" min="1" placeholder="Anzahl Personen" required />
+          <textarea name="Nachricht" placeholder="Nachricht (optional)"></textarea>
+          <input type="hidden" name="_next" value="../danke.html" />
+          <button type="submit">Reservieren</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fachschaft Mathematik – Universität Trier</p>
+    <p><a href="../impressum.html">Impressum</a> • <a href="../datenschutz.html">Datenschutz</a></p>
+  </footer>
+</body>
+</html>
