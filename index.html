@@ -10,22 +10,26 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#home"><img src="assets/logo.png" alt="Logo" class="nav-logo"></a>
-      <div class="burger" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#events">Veranstaltungen</a></li>
-        <li><a href="#upload">Klausuren</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="#home"><img src="assets/logo.png" alt="Logo" class="nav-logo"></a>
+    
+    <!-- Burger-Menü-Icon -->
+    <div class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
-  </nav>
+
+    <!-- Navigationslinks -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">Über uns</a></li>
+      <li><a href="#team" onclick="toggleMenu()">Team</a></li>
+      <li><a href="#events" onclick="toggleMenu()">Veranstaltungen</a></li>
+      <li><a href="#upload" onclick="toggleMenu()">Klausuren</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Hero -->
   <header class="hero" id="home">
@@ -39,7 +43,107 @@
     </div>
   </header>
 
-  <!-- Weitere Inhalte bleiben unverändert -->
+  <!-- Über uns -->
+  <section id="about" class="section professional-about fade-in">
+    <div class="container">
+      <h2 class="section-title">Über uns</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="icon">🎓</div>
+          <h3>Studentische Vertretung</h3>
+          <p>Wir vertreten alle Mathematikstudierenden der Universität Trier – demokratisch gewählt, unabhängig und für euch da!</p>
+        </div>
+        <div class="about-card">
+          <div class="icon">🏛️</div>
+          <h3>Universitäre Arbeit</h3>
+          <p>Wir sitzen in Gremien & Ausschüssen und kämpfen für faire Prüfungen, gute Lehre und Mitbestimmung.</p>
+        </div>
+        <div class="about-card">
+          <div class="icon">🎉</div>
+          <h3>Veranstaltungen</h3>
+          <p>Ersti-Kneipentour, Frühstück, Spieleabend, Freizeithaus – bei uns ist Mathe nicht nur Theorie, sondern Gemeinschaft!</p>
+        </div>
+        <div class="about-card blue">
+          <div class="icon">🤝</div>
+          <h3>Kooperationen</h3>
+          <p>Wir arbeiten mit Firmen & Organisationen zusammen, um euch Chancen, Workshops und Austausch zu bieten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Unser Team</h2>
+      <div class="team-grid">
+        <div class="team-member"><img src="assets/Team/alice.png" alt="Alice Thiex" onclick="openModal(this)"><h3>Alice Thiex</h3><p>Presseministerin / Vizefinanzministerin</p></div>
+        <div class="team-member"><img src="assets/Team/elias.png" alt="Riber Shamo Elias" onclick="openModal(this)"><h3>Riber Shamo Elias</h3><p>Informationsminister</p></div>
+        <div class="team-member"><img src="assets/Team/esther.png" alt="Esther Jelden" onclick="openModal(this)"><h3>Esther Jelden</h3><p>Sportministerin</p></div>
+        <div class="team-member"><img src="assets/Team/lukas.png" alt="Lukas Fehst" onclick="openModal(this)"><h3>Lukas Fehst</h3><p>Partymninister</p></div>
+        <div class="team-member"><img src="assets/Team/mara.png" alt="Mara Thielen" onclick="openModal(this)"><h3>Mara Thielen</h3><p>Innenministerin</p></div>
+        <div class="team-member"><img src="assets/Team/meike.png" alt="Meike Hufschmidt" onclick="openModal(this)"><h3>Meike Hufschmidt</h3><p>Finanzministerin</p></div>
+        <div class="team-member"><img src="assets/Team/kloppe.png" alt="Moritz Kloppe" onclick="openModal(this)"><h3>Moritz Kloppe</h3><p>Außenminister</p></div>
+        <div class="team-member"><img src="assets/Team/senftleben.png" alt="Moritz Senftleben" onclick="openModal(this)"><h3>Moritz Senftleben</h3><p>Kanzler</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Veranstaltungen -->
+  <section id="events" class="section fade-in">
+    <div class="container">
+      <h2 class="section-title">Unsere Veranstaltungen</h2>
+      <div class="event-grid">
+        <div class="event-card"><h3>📍 Stadtrallye</h3><p>10. April 2025</p><a class="btn" href="events/stadtrallye.html">Mehr erfahren</a></div>
+        <div class="event-card"><h3>🍕 Spieleabend</h3><p>24. April 2025</p><a class="btn" href="events/spieleabend.html">Mehr erfahren</a></div>
+        <div class="event-card"><h3>🥐 Erstifrühstück</h3><p>14. April 2025</p><a class="btn" href="events/erstifruehstueck.html">Mehr erfahren</a></div>
+        <div class="event-card"><h3>🍻 Kneipentour</h3><p>17. April 2025</p><a class="btn" href="events/kneipentour.html">Mehr erfahren</a></div>
+        <div class="event-card"><h3>🏕️ Kordel</h3><p>28. Mai 2025</p><a class="btn" href="events/kordel.html">Mehr erfahren</a></div>
+        <div class="event-card"><h3>💼 Workshop mit MLP</h3><p>12. Mai 2025</p><a class="btn" href="events/mlp.html">Mehr erfahren</a></div>
+        <div class="event-card"><h3>📚 Infostand</h3><p>07. April 2025</p><a class="btn" href="events/infostand.html">Mehr erfahren</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Klausuren Upload -->
+  <section id="upload" class="section alt fade-in">
+    <div class="container">
+      <h2 class="section-title">Klausuren & Protokolle einreichen</h2>
+      <form action="https://formspree.io/f/mldjawnb" method="POST" class="animated-form">
+        <input type="text" name="Semester" placeholder="Semester (z. B. WS 23/24)" required />
+        <input type="text" name="Dozent" placeholder="Dozent/in" required />
+        <input type="text" name="Veranstaltung" placeholder="Veranstaltung" required />
+        <input type="email" name="_replyto" placeholder="Deine E-Mail für Rückfragen" required />
+        <textarea name="Link zur Datei" placeholder="z. B. Google Drive oder Nextcloud-Link" required></textarea>
+        <input type="hidden" name="_next" value="danke.html" />
+        <button type="submit">Absenden</button>
+      </form>
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: #555;">💡 Alternativ kannst du uns Klausuren & Protokolle auch wie gewohnt direkt per E-Mail an <a href="mailto:fsr-mathe@uni-trier.de">fsr-mathe@uni-trier.de</a> senden.</p>
+    </div>
+  </section>
+
+  <!-- Interesse geweckt -->
+  <section class="cta-section fade-in">
+    <div class="container">
+      <h2 class="cta-title">HABEN WIR EUER INTERESSE GEWECKT?</h2>
+      <p class="cta-subtitle">Dann komm vorbei oder schreib uns – wir freuen uns auf dich!</p>
+      <div class="cta-grid">
+        <div class="cta-box"><p>Jede*r Mathestudi an der Uni Trier kann bei uns mitmachen – Ideen einbringen, Meinungen vertreten, Events organisieren u. v. m.</p></div>
+        <div class="cta-box"><p>Unsere Fachschaftstreffen finden donnerstags ab 18 Uhr statt – komm vorbei oder schreib uns über Instagram oder E-Mail!</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <footer id="contact" class="footer fade-in">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>Email: <a href="mailto:fsr-mathe@uni-trier.de">fsr-mathe@uni-trier.de</a></p>
+      <p>Raum C335, Universität Trier</p>
+      <p>Impressum • Datenschutz</p>
+      <p>&copy; 2025 Fachschaft Mathematik</p>
+    </div>
+  </footer>
 
   <!-- Modal für vergrößerte Bilder -->
   <div id="modal" class="modal" onclick="closeModal()">
@@ -48,45 +152,6 @@
   </div>
 
   <style>
-    .burger {
-      display: none;
-      font-size: 1.8rem;
-      color: #333;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .burger {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        z-index: 1000;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links li {
-        margin: 0.8rem 0;
-      }
-
-      .nav-container {
-        justify-content: space-between;
-      }
-    }
-
     .modal {
       display: none;
       position: fixed;
@@ -128,6 +193,51 @@
       from { transform: scale(0.8); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+
+
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.8rem 0;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+}
+
+
+
+
+    
   </style>
 
   <script>
@@ -140,10 +250,12 @@
     function closeModal() {
       document.getElementById('modal').style.display = 'none';
     }
-
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
   </script>
+  <script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
 </body>
 </html>
