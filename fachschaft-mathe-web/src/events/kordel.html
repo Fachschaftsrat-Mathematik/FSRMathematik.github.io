@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kordel – Fachschaft Mathematik</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    header.hero {
+      background-image: url('../assets/background.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+    }
+
+    header.hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header.hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    header.hero h1,
+    header.hero p {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .info-section {
+      flex: 1 1 60%;
+    }
+
+    .form-section {
+      flex: 1 1 35%;
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: #002b5c;
+      color: white;
+      text-align: center;
+    }
+
+    footer a {
+      color: #a5cfff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Kordel</h1>
+      <p>13. Juni 2025 • Treffpunkt: Trier-Euren</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container content-grid">
+      <div class="info-section">
+        <h2>🧵 Die legendäre Kordel-Feier 🎉</h2>
+        <p><strong>Grillen, Getränke & Gemeinschaft – Mathe mal anders!</strong></p>
+
+        <p>Einmal im Jahr wird es laut, lecker und legendär: Unsere alljährliche <strong>Kordel-Feier</strong> bringt alle Mathematik-Studierenden, Professor*innen und Freunde zusammen – bei einer geselligen Grillrunde in der Hütte des Kameradenvereins Trier-Euren.</p>
+
+        <h3>🔥 Was euch erwartet:</h3>
+        <ul>
+          <li>Frisches vom Grill (auch vegetarisch & vegan)</li>
+          <li><strong>Kostenlose Getränke</strong> für alle Gäste 🍻</li>
+          <li>Der berühmte <strong>Tauzieh-Wettbewerb</strong>: Studis gegen Profs 💪</li>
+          <li>Eine <strong>Tombola mit tollen Preisen</strong></li>
+          <li>Und das Wichtigste: Gemeinschaft, Austausch und jede Menge Spaß!</li>
+        </ul>
+
+        <p>🎟️ Die Tickets erhaltet ihr im Vorverkauf für <strong>4 €</strong> (inkl. aller Getränke!) oder für <strong>5 €</strong> an der Abendkasse. Wer Lust hat, kann auch einen Kuchen oder Salat mitbringen – sprecht uns einfach vorher kurz an.</p>
+
+        <p>Die <strong>Kordel</strong> ist nicht nur der Name der Feier, sondern steht für das, was uns verbindet: <br><em>Zusammenhalt, Tradition & Lebensfreude im Mathe-Studium.</em></p>
+
+        <h2>So funktioniert die Reservierung</h2>
+        <p>Fülle einfach das Reservierungsformular rechts aus. Nach dem Absenden bekommst du eine Bestätigung per E-Mail.</p>
+        <p><strong>Bezahlung:</strong> Bitte bring den Teilnahmebeitrag persönlich im Fachschaftsbüro vorbei. Erst mit Bezahlung ist deine Reservierung gültig.</p>
+
+        <h2>Bilder früherer Kordel-Feiern</h2>
+        <div class="gallery">
+          <img src="../assets/stadtrallye-2023.jpg" alt="Kordel 2023" />
+          <img src="../assets/stadtrallye-2022.jpg" alt="Kordel 2022" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Jetzt reservieren</h2>
+        <form action="https://formspree.io/f/mldjawnb" method="POST">
+          <input type="text" name="Veranstaltung" value="Kordel – 13.06.25" readonly />
+          <input type="text" name="Name" placeholder="Dein Name" required />
+          <input type="email" name="_replyto" placeholder="E-Mail" required />
+          <input type="number" name="Tickets" min="1" placeholder="Anzahl Personen" required />
+          <textarea name="Nachricht" placeholder="Nachricht (optional)"></textarea>
+          <input type="hidden" name="_next" value="../danke.html" />
+          <button type="submit">Reservieren</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fachschaft Mathematik – Universität Trier</p>
+    <p><a href="../impressum.html">Impressum</a> • <a href="../datenschutz.html">Datenschutz</a></p>
+  </footer>
+</body>
+</html>
